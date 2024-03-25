@@ -1,6 +1,9 @@
 //Código Proyecto Fundamentos de Arquitectura
 //Estudiante: Meibel Ceciliano Picado
 
+//............................
+// CONFIGURACION DE LA LCD
+//............................
 
 #include <Wire.h>  // Incluir la librería para la comunicación I2C
 #include <LiquidCrystal_I2C.h>  // Incluir la librería para la pantalla LCD I2C
@@ -57,14 +60,19 @@ void setup() {
   
   Serial.begin(9600);    // Inicializa la comunicación serial
   
+  
   //..................
-  //      LCD
+  //      ARDUINO
   //..................
   
   // PINES QUE RECIBEN EL BINARIO EN EXCESO 3
   pinMode(pinBitX, INPUT);
   pinMode(pinBitY, INPUT);
   pinMode(pinBitZ, INPUT);
+  
+  //..................
+  //      LCD
+  //..................
   
   // Inicializar la comunicación I2C y la pantalla LCD
   Wire.begin();
@@ -167,7 +175,7 @@ void loop() {
  
   
   //...............................................................
-  //  CODIGO PARA ENTRADA EXCESO GRAY Y PASAR A DECIMAL PARA LA LCD
+  //  CODIGO PARA ENTRADA EXCESO 3 Y PASAR A DECIMAL PARA LA LCD
   //...............................................................
   
  
