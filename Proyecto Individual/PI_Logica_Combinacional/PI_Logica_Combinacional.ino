@@ -136,7 +136,7 @@ void loop() {
       digitalWrite(pinBitA, LOW);
       digitalWrite(pinBitB, HIGH);
       digitalWrite(pinBitC, LOW);
-      break
+      break;
     case 4:
       Serial.print("Rango: 585-730, Codigo Gray: ");
       Serial.println("110"); 
