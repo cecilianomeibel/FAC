@@ -105,61 +105,61 @@ void loop() {
   duracion = pulseIn(ECHO, HIGH);
   
   // Calcular la distancia en centímetros
-  distancia = duracion / 58.2;
-  int gray = distancia / 42; // Divide el rango (335/8 = 42)
+  distancia = duracion / 57.6;  //Establecer una distancia de 55cm
+  int gray = distancia / 7; // Divide el rango (55/8 = 7)
   
   switch (gray) {
     case 0:
-      Serial.print("Rango: 0-42, Codigo Gray: ");
+      Serial.print("Distancia: 0-7 cm, Codigo Gray: ");
       Serial.println("000"); 
       digitalWrite(pinBitA, LOW);
       digitalWrite(pinBitB, LOW);
       digitalWrite(pinBitC, LOW);
       break;
     case 1:
-      Serial.print("Rango: 43-85, Codigo Gray: ");
+      Serial.print("Distancia: 8-15 cm, Codigo Gray: ");
       Serial.println("001"); 
       digitalWrite(pinBitA, LOW);
       digitalWrite(pinBitB, LOW);
       digitalWrite(pinBitC, HIGH);
       break;
     case 2:
-      Serial.print("Rango: 86-128, Codigo Gray: ");
+      Serial.print("Distancia: 16-23 cm, Codigo Gray: ");
       Serial.println("011"); 
       digitalWrite(pinBitA, LOW);
       digitalWrite(pinBitB, HIGH);
       digitalWrite(pinBitC, HIGH);
       break;
     case 3:
-      Serial.print("Rango: 439-584, Codigo Gray: ");
+      Serial.print("Distancia: 24-31 cm, Codigo Gray: ");
       Serial.println("010"); 
       digitalWrite(pinBitA, LOW);
       digitalWrite(pinBitB, HIGH);
       digitalWrite(pinBitC, LOW);
       break;
     case 4:
-      Serial.print("Rango: 585-730, Codigo Gray: ");
+      Serial.print("Distancia: 32-39 cm, Codigo Gray: ");
       Serial.println("110"); 
       digitalWrite(pinBitA, HIGH);
       digitalWrite(pinBitB, HIGH);
       digitalWrite(pinBitC, LOW);
       break;
     case 5:
-      Serial.print("Rango: 731-876, Codigo Gray: ");
+      Serial.print("Distancia: 40-47 cm, Codigo Gray: ");
       Serial.println("111"); 
       digitalWrite(pinBitA, HIGH);
       digitalWrite(pinBitB, HIGH);
       digitalWrite(pinBitC, HIGH);
       break;
     case 6:
-      Serial.print("Rango: 877-1023, Codigo Gray: ");
+      Serial.print("Distancia: 48-55 cm, Codigo Gray: ");
       Serial.println("101"); 
       digitalWrite(pinBitA, HIGH);
       digitalWrite(pinBitB, LOW);
       digitalWrite(pinBitC, HIGH);
       break;
     case 7:
-      Serial.print("Rango: 877-1023, Codigo Gray: ");
+      Serial.print("Rango: 49-55, Codigo Gray: ");
       Serial.println("100"); 
       digitalWrite(pinBitA, HIGH);
       digitalWrite(pinBitB, LOW);
@@ -200,4 +200,3 @@ void loop() {
 
   delay(1000);
 }
-
